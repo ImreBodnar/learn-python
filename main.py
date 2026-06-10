@@ -9,7 +9,7 @@ def days_to_units(num_of_days):
 
 def validate_execute():
     try:
-        user_value = int(user_input)
+        user_value = int(input_value)
         if user_value > 0:
             calculated_value = days_to_units(user_value)
             print(f"Calculated value: {calculated_value}")
@@ -24,5 +24,7 @@ def validate_execute():
 user_input = ""
 while user_input != "exit":
     user_input = input("Enter a number of days: ")
-    print(f"Given value: {user_input}")
-    validate_execute()
+    print(f"Given value: {user_input.split(',')}")
+    print(f"DataType: {type(user_input.split(','))}")
+    for input_value in set(user_input.split(',')):
+        validate_execute()
