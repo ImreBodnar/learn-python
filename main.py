@@ -8,18 +8,21 @@ def days_to_units(num_of_days):
 
 
 def validate_execute():
-    if user_input.isdigit():
+    try:
         user_value = int(user_input)
         if user_value > 0:
             calculated_value = days_to_units(user_value)
             print(f"Calculated value: {calculated_value}")
         elif user_value == 0:
-            print("it's zero")
-    else:
-        print("Input is not digit!")
+            print("It's zero")
+        else:
+            print("It's negative")
+    except ValueError:
+        print("It's not digit!")
 
 
-user_input = input("Enter a number of days: ")
-print(f"Given value: {user_input}")
-
-validate_execute()
+user_input = ""
+while user_input != "exit":
+    user_input = input("Enter a number of days: ")
+    print(f"Given value: {user_input}")
+    validate_execute()
