@@ -1,3 +1,5 @@
+# Queries and shows the statuses of EC2 instances in every 5 seconds.
+
 import boto3
 import schedule
 

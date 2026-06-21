@@ -1,3 +1,5 @@
+# Queries and shows the statuses of EKS clusters.
+
 import boto3
 
 client = boto3.client('eks')

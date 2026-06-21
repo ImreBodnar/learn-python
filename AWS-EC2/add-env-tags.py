@@ -1,3 +1,5 @@
+# Adds different tags to EC2 instances in different regions.
+
 import boto3
 
 ec2_client_frankfurt = boto3.client('ec2', region_name='eu-central-1')
